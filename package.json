@@ -1,0 +1,46 @@
+{
+  "name": "@sqaoss/ai-token-audit",
+  "version": "0.1.0",
+  "description": "Audit AI coding-agent config files (CLAUDE.md, AGENTS.md, …) for token waste. Per-section cost breakdown with concrete shrink targets.",
+  "type": "module",
+  "bin": {
+    "ai-token-audit": "./src/index.ts"
+  },
+  "files": [
+    "src/**/*.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "agents-md",
+    "claude-md",
+    "token",
+    "lint",
+    "audit",
+    "cursor",
+    "codex",
+    "ai-agent"
+  ],
+  "license": "MIT",
+  "author": "SQA & Automation SRL <ops@sqaoss.dev>",
+  "homepage": "https://github.com/sqaoss/ai-token-audit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sqaoss/ai-token-audit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sqaoss/ai-token-audit/issues"
+  },
+  "engines": {
+    "bun": ">=1.2.0"
+  },
+  "dependencies": {
+    "js-tiktoken": "^1.0.14"
+  },
+  "scripts": {
+    "start": "bun src/index.ts",
+    "audit": "bun src/index.ts"
+  }
+}

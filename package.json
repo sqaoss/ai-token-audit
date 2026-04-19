@@ -4,10 +4,10 @@
   "description": "Audit AI coding-agent config files (CLAUDE.md, AGENTS.md, …) for token waste. Per-section cost breakdown with concrete shrink targets.",
   "type": "module",
   "bin": {
-    "ai-token-audit": "./src/index.ts"
+    "ai-token-audit": "./dist/index.js"
   },
   "files": [
-    "src/**/*.ts",
+    "dist/**",
     "README.md",
     "LICENSE"
   ],
@@ -34,13 +34,18 @@
     "url": "https://github.com/sqaoss/ai-token-audit/issues"
   },
   "engines": {
-    "bun": ">=1.2.0"
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "js-tiktoken": "^1.0.14"
   },
   "scripts": {
     "start": "bun src/index.ts",
-    "audit": "bun src/index.ts"
+    "audit": "bun src/index.ts",
+    "build": "bun build --target=node --format=esm src/index.ts --outfile dist/index.js --minify",
+    "prepublishOnly": "bun run build"
   }
 }

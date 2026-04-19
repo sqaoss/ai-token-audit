@@ -15,11 +15,11 @@ Every token in your `CLAUDE.md` is paid on *every* prompt of *every* session. A 
 ## Quick start
 
 ```bash
-# One-shot, no install (Bun only)
-bunx @sqaoss/ai-token-audit
+# One-shot, no install
+npx @sqaoss/ai-token-audit           # or: bunx @sqaoss/ai-token-audit
 
 # Or install globally
-bun add -g @sqaoss/ai-token-audit
+npm install -g @sqaoss/ai-token-audit
 ai-token-audit                       # auto-detects CLAUDE.md and AGENTS.md
 ai-token-audit path/to/CLAUDE.md     # specific file(s)
 ai-token-audit --all                 # every section, not just the top 10

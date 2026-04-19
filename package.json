@@ -1,6 +1,6 @@
 {
   "name": "@sqaoss/ai-token-audit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Audit AI coding-agent config files (CLAUDE.md, AGENTS.md, …) for token waste. Per-section cost breakdown with concrete shrink targets.",
   "type": "module",
   "bin": {
@@ -46,6 +46,6 @@
     "start": "bun src/index.ts",
     "audit": "bun src/index.ts",
     "build": "bun build --target=node --format=esm src/index.ts --outfile dist/index.js",
-    "prepublishOnly": "bun run build"
+    "prepublishOnly": "bun run build && node dist/index.js --version"
   }
 }

@@ -7,7 +7,7 @@ import { parseSections } from "./parse.ts";
 import { auditFile, formatAudit, type FileAudit } from "./report.ts";
 
 const USAGE = `
-ai-token-audit — static linter for AI-agent config files (v0.1.0)
+ai-token-audit — static linter for AI-agent config files (v0.1.1)
 
 Usage:
   ai-token-audit [files...] [options]
@@ -43,7 +43,7 @@ function parseArgv(argv: string[]): Argv | null {
   for (const a of argv) {
     if (a === "-h" || a === "--help") return null;
     if (a === "-v" || a === "--version") {
-      console.log("0.1.0");
+      console.log("0.1.1");
       process.exit(0);
     }
     if (a === "--all") out.showAll = true;
@@ -90,7 +90,7 @@ async function main() {
   }
 
   if (argv.json) {
-    process.stdout.write(JSON.stringify({ version: "0.1.0", audits }, null, 2) + "\n");
+    process.stdout.write(JSON.stringify({ version: "0.1.1", audits }, null, 2) + "\n");
     return;
   }
 

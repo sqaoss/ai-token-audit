@@ -45,7 +45,7 @@
   "scripts": {
     "start": "bun src/index.ts",
     "audit": "bun src/index.ts",
-    "build": "bun build --target=node --format=esm src/index.ts --outfile dist/index.js --minify",
+    "build": "bun build --target=node --format=esm src/index.ts --outfile dist/index.js",
     "prepublishOnly": "bun run build"
   }
 }
